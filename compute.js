@@ -21,8 +21,8 @@ const server =
        
           console.log("Look for query parameter data: " + search_params.get("data"))
           const x = search_params.get("x")
-          const sqrtFormula =  Math.sqrt("x")
-          const sqrtResult = `Sqrt of (  ${x} ) is  ${sqrtFormula}`
+          const sqrtFormula =  Math.sqrt(x)
+          const sqrtResult = `Sqrt of (${x}) is  ${sqrtFormula}`
 
           // Process the queries here
           res.statusCode = 200      //code for OK
