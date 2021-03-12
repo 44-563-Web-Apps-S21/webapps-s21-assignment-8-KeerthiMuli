@@ -9,7 +9,7 @@ const server =
       res.statusCode = 200      //code for OK
       res.setHeader('Content-Type', 'text/html') //Set the mime type HTML
 
-      res.write('<html> <head> <title> Served </title> </head>')
+      res.write('<html> <head> <title> My Table </title> </head>')
       res.write('<body>')
       res.write('<table>')
       res.write('<tr>')
