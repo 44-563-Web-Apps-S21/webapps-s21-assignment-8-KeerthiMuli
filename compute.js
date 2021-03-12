@@ -21,12 +21,13 @@ const server =
        
           console.log("Look for query parameter data: " + search_params.get("data"))
           const x = search_params.get("x")
-          const sqrtResult =  Math.sqrt("x")
+          const sqrtFormula =  Math.sqrt("x")
+          const sqrtResult = `Sqrt of (  ${x} ) is  ${sqrtFormula}`
 
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write('Sqrt of (  ${x} ) is  ${sqrtResult}')
+          res.write('sqrtResult')
           res.end();
         
       } else {
