@@ -27,7 +27,7 @@ const server =
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write('sqrtResult')
+          res.write(sqrtResult)
           res.end();
         
       } else {
