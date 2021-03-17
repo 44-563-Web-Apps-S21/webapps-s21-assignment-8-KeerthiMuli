@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my Response Page</title>
+</head>
+<body>
+    <div class="Introduction">
+        <h1>Movie Platforms</h1>
+        <h4>Click on the button to get differnt platforms to watch Movies</h4>
+        <div>
+            <button onclick="getMoviePlatforms()">Get Movie Platforms</button>
+        </div>
+    </div>
+
+    <div id="MoviePlatforms"></div>
+    <script>
+        const getMoviePlatforms = () => {
+            fetch('http://127.0.0.1:3001').then(
+                (res) => {
+                    console.log(res)
+                    return res.text()
+                }
+            ).then(data => {
+            
+                console.log(data)
+                document.getElementById("MoviePlatforms").innerHTML = data
+            }).catch(err => {
+                document.getElementById("MoviePlatforms").innerHTML = err
+            })
+        }
+    </script>
+</body>
+</html>
