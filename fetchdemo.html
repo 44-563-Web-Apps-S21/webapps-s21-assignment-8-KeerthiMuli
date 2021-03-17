@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Welcome to my fetchDemo Page</title>
+       
+    </head>
+    <body>
+        <h1>Keerthi Muli Computes</h1>
+        <div>  
+            <input type="number" name="number1" id="n1"><br>
+             <!--input type="number" name="number2" id="n2"-->
+        </div>
+        <button onclick="remoteCompute()">Remote compute</button>
+
+        <div id="result">
+
+        </div>
+        <script>
+            const remoteCompute=()=>{
+                let num1=document.getElementById("n1").value
+                //let num2=document.getElementById("n2").value
+                let url=`http://127.0.0.1:3001?x=${num1}`
+                fetch(url).then(
+                    (response)=>{
+                        console.log(response)
+                        return response.text();
+                    }
+                ).then((data)=>{
+                    console.log(data)
+                    document.getElementById("result").innerHTML=data
+                }).catch(err=>{
+                    document.getElementById("result").innerHTML=err
+                })
+            }
+        </script>
+    </body>
+</html>
