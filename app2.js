@@ -11,7 +11,7 @@ const server =
 
       res.write('<html> <head> <title> My Table </title> </head>')
       res.write('<body>')
-      res.write('<table>')
+      res.write('<table border = "2">')
       res.write('<tr>')
       res.write('<th>Location</th>')
       res.write(' <th>Number of Hours</th> ')
